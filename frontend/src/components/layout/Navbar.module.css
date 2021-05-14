@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    background-color: black;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.header ul {
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(5,auto);
+    grid-gap: 10px;
+    text-align: center;
+    justify-content: end;
+    list-style: none;
+    margin-right: 2rem;
+    
+}
+
+.header li {
+    margin-left: 2rem;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.header a:hover {
+    color: #56B6E0;
+    transition: all 0.2s ease-out;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+}
+
+.nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-bars {
+    color: #fff;
+}
