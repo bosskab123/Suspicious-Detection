@@ -2,18 +2,37 @@
     background-image: linear-gradient(0deg, #01080B, #212324);
     height: 45px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-left {
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-gap: 0px;
+    margin-left: 20px;
 }
 
 .nav-logo {
     color: #fff;
+    display: flex;
+    align-items: center;
     justify-self: start;
 }
 
+.nav-logo a {
+    color: #fff;
+}
+
 .nav-logo a:hover {
-    background-color: transparent;
     color: #fff;
 }
 
@@ -28,38 +47,8 @@
     grid-gap: 0px;
     list-style: none;
     text-align: center;
-    width: 70vw;
     justify-content: left;
     margin-right: 2rem;
-}
-
-.nav-login {
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    grid-gap: 1px;
-    list-style: none;
-    text-align: center;
-    justify-content: left;
-    margin-right: 2rem;
-}
-
-.nav-login a{
-    list-style: none;
-    text-align: center;
-    justify-content: end;
-}
-
-.nav-login a:hover {
-    background-color: #333333;
-    color: #54B7E9;
-    border-radius: 3px;
-    transition: all 0.2s ease-out;
-}
-
-.nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
 }
 
 .nav-menu a:hover {
@@ -69,21 +58,67 @@
     transition: all 0.2s ease-out;
 }
 
+.nav-login {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 0px;
+    text-align: center;
+    justify-content: left;
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-login a {
+    list-style: none;
+}
+
+.nav-login a:hover {
+    background-color: #333333;
+    color: #54B7E9;
+    border-radius: 3px;
+    transition: all 0.2s ease-out;
+}
+
 .nav-special-menu a {
-    background-color: #5BF6FE;
+    background-color: #F2F2F2;
     padding: 0.2rem 1rem;
     border-radius: 4px;
     font-weight: 700;
-    color: black;
+    color: #253B41;
 }
 
 .nav-special-menu a:hover {
-    background-color: #17C9FD;
-    padding: 0.4rem 1rem;
+    background-color: #F2F2F2;
+    padding: 0.2rem 1rem;
     border-radius: 4px;
     font-weight: bolder;
-    color: white;
+    color: #258099;
     transition: all 0.1s ease-out;
+}
+
+.profile {
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 15px;
+    background-color: #E3E3E3;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+
+.profile h1 {
+    transform: translate(-5%,-40%);
+    font-size: 20px;
+}
+
+.profile img {
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 960px) {
@@ -99,14 +134,14 @@
         height: 500px;
         position: absolute;
         top: 26px;
-        left: -100%;
+        left: -120%;
         opacity: 1;
         transition: all 0.5s ease;
     }
 
     .nav-menu.active {
         background: black;
-        left: 0;
+        left: -1%;
         opacity: 0.9;
         transition: all 0.5s ease;
         z-index: 1;
@@ -118,7 +153,7 @@
         padding: 2rem;
         width: 100%;
         display: table;
-        transform: translate(-9%,0%);
+        transform: translate(-10%,0%);
     }
 
     .nav-menu a {
@@ -129,7 +164,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        transform: translate(20%, 30%);
+        transform: translate(20%, 0%);
     }
 
     .nav-logo a:hover {
@@ -154,14 +189,12 @@
 
     .nav-login {
         display: flex;
-        position: absolute;
-        right: 0;
+        position: relative;
     }
 
     .nav-login.active {
         display: flex;
-        position: absolute;
-        right: 0;
+        position: relative;
         transition: 1000ms ease;
     }
 }
