@@ -13,7 +13,7 @@ import AnalyseVideo from './pages/AnalyseVideo';
 
 function App() {
   
-  const [user, setUser] = useState({id: null, username: null});
+  const [user, setUser] = useState({id: null, img: null, subscription: 'none'});
 
   const value = useMemo(() => ({user,setUser}), [user,setUser]);
 

@@ -1,16 +1,20 @@
 .page {
-    background-color: black;
-    position: absolute;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba( 42, 42, 42, 1) 0%, rgba(1,10,8,1) 100%);
+    height: 100vh;
     width: 100%;
-    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
 }
 
 .frame {
-    background: rgb(217,217,217);
-    background: linear-gradient(300deg, rgba(217,217,217,1) 0%, rgba(162,162,162,1) 55%, rgba(82,82,82,1) 100%);
-    border-radius: 15px;
+    background: white;
+    box-shadow: 10px 10px 10px #585858;
+    border-radius: 3px;
     margin: auto;
-    margin-top: 5%;
     width: 20%;
     height: 500px;
     display: block;
@@ -32,23 +36,41 @@
 .frame form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.frame-box {
+    display: flex;
+    flex-direction: column;
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+    width: 90%;
+}
+
+.frame-box-head {
+    color: black;
+    text-align: start;
 }
 
 .frame-input {
     background-color: #464646;
-    border-radius: 6px;
+    border-radius: 5px;
     color: white;
-    width: 90%;
+    width: 95%;
     height: 30px;
     margin: auto;
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .frame-submit {
     background-color: black;
-    border-radius: 20px;
+    border-radius: 5px;
     color: white;
     margin: auto;
     margin-top: 25px;
-    width: 20%;
+    width: 90%;
     height: 30px;
 }
